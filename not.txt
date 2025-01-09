@@ -1,0 +1,139 @@
+
+1. Ana Sayfa (PHP'ye Genel Bakış)
+Başlık: PHP'nin kısa bir tanımı ve neden popüler olduğu.
+İçerik: PHP'nin tarihçesi, kullanım alanları (ör. web siteleri, dinamik içerik oluşturma), avantajları ve popüler framework'ler (Laravel, Symfony gibi).
+Örnek:
+"PHP, dinamik web siteleri ve uygulamalar oluşturmak için kullanılan popüler bir sunucu taraflı betik dilidir."
+2. PHP Kurulumu ve Gerekli Araçlar
+Başlık: PHP'yi nasıl kuracağınızı öğrenin.
+İçerik:
+PHP'yi yüklemek için gereken yazılımlar: XAMPP, WAMP veya MAMP.
+Basit bir "Hello, World!" uygulamasının nasıl oluşturulacağı.
+Adımlar:
+XAMPP indirin ve kurun.
+PHP dosyanızı htdocs klasörüne kaydedin.
+Tarayıcıdan çalıştırın: http://localhost/hello.php.
+3. PHP Söz Dizimi ve Temel Yapılar
+Başlık: PHP dilinin temel yapılarını öğrenin.
+İçerik:
+Değişkenler, diziler, döngüler, if-else gibi yapılar.
+Kod örnekleri:
+php
+Kodu kopyala
+<?php
+$ad = "PHP";
+echo "Merhaba, $ad!";
+?>
+4. PHP ile Form İşlemleri
+Başlık: Form verilerini PHP ile işleme.
+İçerik:
+HTML formları ile veri toplama.
+Veritabanına kayıt ve hata yönetimi.
+Örnek:
+php
+Kodu kopyala
+<form method="post">
+    <input type="text" name="isim" placeholder="Adınız">
+    <input type="submit" value="Gönder">
+</form>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Merhaba, " . htmlspecialchars($_POST['isim']);
+}
+?>
+5. PHP ile Veritabanı Kullanımı
+Başlık: PHP ve MySQL kullanımı.
+İçerik:
+Veritabanı bağlantısı.
+Veri ekleme, silme, güncelleme ve okuma işlemleri.
+Örnek:
+php
+Kodu kopyala
+$conn = new mysqli("localhost", "root", "", "veritabani");
+if ($conn->connect_error) {
+    die("Bağlantı hatası: " . $conn->connect_error);
+}
+$conn->query("INSERT INTO tablo (isim) VALUES ('PHP')");
+6. PHP Framework ve Kütüphaneler
+Başlık: Popüler PHP araçları.
+İçerik:
+Laravel, CodeIgniter gibi framework'lerin tanıtımı.
+Composer ile paket yönetimi.
+Ek Bilgi: Laravel'in yapısı ve avantajları.
+7. PHP İle Örnek Proje
+Başlık: PHP ile bir mini blog sitesi oluşturma.
+İçerik:
+Kullanıcı kayıt ve giriş sistemi.
+Blog gönderileri ekleme ve listeleme.
+Adım Adım Rehber: Basit bir giriş sistemi kodu:
+php
+Kodu kopyala
+<?php
+session_start();
+if ($_POST['username'] == "admin" && $_POST['password'] == "1234") {
+    $_SESSION['login'] = true;
+    echo "Giriş başarılı!";
+} else {
+    echo "Hatalı kullanıcı adı veya şifre.";
+}
+?>
+8. Sıkça Sorulan Sorular (SSS)
+PHP nedir?
+PHP öğrenmek için ne kadar zaman gerekir?
+PHP ile ne tür projeler yapılabilir?
+9. Kaynaklar
+Resmi PHP belgeleri: php.net
+Ücretsiz PHP öğrenme kaynakları.
+Video eğitim serileri.
+
+
+Bu içeriklerin hazır hallerini bulabileceğiniz bazı platformları ve araçları aşağıda sıraladım:
+
+1. Görseller ve Animasyonlar
+PHP ile İlgili Grafikler ve Görseller:
+
+Freepik: PHP ile ilgili infografikler ve tasarım öğeleri.
+Flaticon: PHP ikonları ve logolar.
+Unsplash: Yüksek kaliteli ücretsiz görseller (PHP konseptini desteklemek için genel teknoloji görselleri).
+Hazır Animasyonlar:
+
+LottieFiles: PHP avantajlarını gösterecek animasyonlar indirebilirsiniz.
+CSS Animasyonları:
+Animate.css: Hazır CSS animasyonlarını sitenize kolayca entegre edebilirsiniz.
+GIF ve Video Animasyonları:
+Giphy: PHP ile ilgili hazır GIF animasyonları.
+2. Kod Örnekleri
+PHP Kod Örnekleri:
+
+W3Schools PHP: Çeşitli PHP örnek kodları ve açıklamaları.
+PHP.net: Resmi dokümantasyon, kod örnekleri ve kullanım kılavuzları.
+GeeksforGeeks: PHP kodlarını öğrenmek ve test etmek için mükemmel bir kaynak.
+TutorialsPoint: PHP ile ilgili teorik bilgiler ve örnekler.
+Canlı Test Edilebilir Kodlar:
+
+PHP Fiddle: Kullanıcıların PHP kodlarını test edebileceği bir platform.
+Replit: PHP kodlarını canlı olarak yazıp çalıştırabileceğiniz bir ortam.
+3. İnteraktif Bölümler
+Hazır PHP Test Alanları:
+
+Online PHP Sandbox: Kullanıcıların PHP kodlarını denemeleri için kullanılabilir.
+CodeSandbox: PHP test projeleri oluşturmak için.
+Kod Düzenleyici ve Çalıştırıcı Araçlar:
+
+Ace Editor: Web sitenize entegre edilebilen bir kod düzenleyici.
+Monaco Editor: Visual Studio Code’un kullandığı editörün bir versiyonu, web sitenizde kullanılabilir.
+PHP Kod Blokları:
+
+Prism.js: Sitenize entegre edebileceğiniz bir kod vurgulama kütüphanesi.
+Highlight.js: Kod bloklarını öne çıkarmak için kullanılabilir.
+4. Tema ve Şablonlar
+Colorlib: PHP temaları ve tasarımları.
+BootstrapMade: Bootstrap tabanlı hazır web site şablonları.
+ThemeForest: PHP'ye uygun profesyonel temalar (ücretli).
+Bu kaynaklardan faydalanarak sitenizin içeriğini hızlıca oluşturabilirsiniz. Daha spesifik bir içerik için yönlendirme isterseniz detay verebilirsiniz! 😊
+
+
+
+
+
+
