@@ -46,7 +46,7 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
+                <a href="index.html" class="navbar-brand p-0">
                     <h1 class="m-0">&lt;?PHP&gt;</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
@@ -57,10 +57,10 @@
                     <div class="navbar-nav mx-auto py-0">
                         <a href="index.html" class="nav-item nav-link" >Anasayfa</a>
                        
-                        <a href="service.html" class="nav-item nav-link">Kurslar</a>
+                        <a href="kurslar.html" class="nav-item nav-link">Kurslar</a>
                         <a href="project.html" class="nav-item nav-link">Dersler</a>
                         
-                        <a href="contact.html" class="nav-item nav-link">İletişim</a>
+                        <a href="contact.html" class="nav-item nav-link active">İletişim</a>
                     
                         
                     </div>
@@ -95,7 +95,6 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-7">
                         <div class="wow fadeInUp" data-wow-delay="0.3s">
-                           
                             <form id="contact">
                                 <div class="row g-3">
                                     <div class="col-md-6">
@@ -123,19 +122,34 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Gönder</button>
+                                        <button class="btn btn-primary w-100" type="submit">Gönder</button>
                                     </div>
                                 </div>
                             </form>
-                            <div id="successMessage" class="alert alert-success mt-4" style="display: none;">
-                                Başarıyla kaydedildi!
+                            <div id="successMessag" class="alert alert-success mt-4" style="display: none;">
+                                Başarıyla Gönderildi
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
+        
+        <script>
+            // Form gönderildiğinde işlem yapacak olan JavaScript kodu
+            document.getElementById("contact").addEventListener("submit", function(event){
+                event.preventDefault(); // Formun gerçek gönderilmesini engeller
+                
+                // Başarı mesajını göster
+                alert("Mesajınız başarıyla gönderildi!");  // Alert mesajı
+        
+                // Formu sıfırlamak
+                document.getElementById("contact").reset();
+            });
+        </script>
+        
+
+
         
 
         <!-- Footer Start -->
@@ -192,7 +206,7 @@
                     
                     <div class="col-md-6 col-lg-2">
                         <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
-                        <p>Stay Always In Touch</p>
+                        <p>Her Zaman İletişimde Kal</p>
                         <div class="position-relative w-100 mt-3">
                             <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
                             <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>

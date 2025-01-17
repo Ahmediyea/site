@@ -1,113 +1,282 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Form İşlemleri</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-
-        .content-section {
-            padding: 50px 0;
-        }
-
-        .btn-back {
-            background-color: #6c757d;
-            color: #fff;
-        }
-
-        .card-code {
-            background-color: #272727;
-            color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-code pre {
-            color: #f8f9fa;
-            font-size: 16px;
-            background-color: #343a40;
-            border-radius: 5px;
-            padding: 15px;
-        }
-
-        .card-header {
-            background-color: #007bff;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        .content-section h2, .content-section h4 {
-            margin-bottom: 30px;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            color: #007bff;
-        }
-
-        .section-description {
-            font-size: 1rem;
-            margin-bottom: 25px;
-        }
-    </style>
+    <title>PHP ve Veritabanı</title>
+    <!-- Stil dosyaları -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="img\file.png" rel="icon">
 </head>
+
 <body>
-
-    <div class="container">
-        <div class="card-header">
-            <h2>PHP Form İşlemleri</h2>
-        </div>
-
-        <div class="content-section">
-            <h4 class="section-title">PHP ile Form İşlemleri</h4>
-            <p class="section-description">PHP ile form verilerini almak ve işlemek oldukça yaygın bir uygulamadır. Bu bölümde, temel PHP form işlemleri hakkında bilgi vereceğiz.</p>
-
-            <!-- Kod Örneği 1 -->
-            <div class="card card-code">
-                <h5 class="card-title">Form HTML Yapısı</h5>
-                <pre>
-&lt;form action="form_process.php" method="post"&gt;
-    &lt;input type="text" name="name" placeholder="Adınız"&gt;
-    &lt;input type="email" name="email" placeholder="E-posta"&gt;
-    &lt;button type="submit"&gt;Gönder&lt;/button&gt;
-&lt;/form&gt;
-                </pre>
+    <div class="container-xxl position-relative p-0">
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <h1 class="m-0"><p>&lt;?PHP&gt;</p></h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">Anasayfa</a>
+                    <a href="kurslar.html" class="nav-item nav-link">Kurslar</a>
+                    <a href="project.html" class="nav-item nav-link">Dersler</a>
+                    <a href="contact.html" class="nav-item nav-link">İletişim</a>
+                </div>
+                <a href="#" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Başa Dön</a>
             </div>
+        </nav>
+        <!-- Navbar End -->
 
-            <h5 class="section-title mt-5">PHP ile Form Verilerini İşlemek</h5>
-            <p class="section-description">Form verilerini işlemek için PHP kullanabilirsiniz. Aşağıda, form verilerini alıp ekrana yazdıran bir PHP kodu örneği bulunmaktadır.</p>
-
-            <!-- Kod Örneği 2 -->
-            <div class="card card-code">
-                <h5 class="card-title">PHP Form İşleme</h5>
-                <pre>
-&lt;?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $name = $_POST["name"];
-        $email = $_POST["email"];
-        echo "Adınız: " . $name . "&lt;br&gt;";
-        echo "E-posta: " . $email;
-    }
-?&gt;
-                </pre>
+        <!-- Hero Section Start -->
+        <div class="container-xxl bg-primary hero-header">
+            <div class="container px-lg-5">
+                <div class="row g-5 align-items-end">
+                    <div class="col-12 text-center">
+                        <h1 class="text-white animated slideInDown">PHP ve Veritabanı</h1>
+                        <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                    </div>
+                </div>
             </div>
-
-            <!-- Geri Dönme Butonu -->
-            <a href="index.html" class="btn btn-back mt-5"><i class="fas fa-arrow-left"></i> Ana Sayfaya Dön</a>
         </div>
+        <!-- Hero Section End -->
+        <section class="php-database-section">
+            <div class="container py-5">
+                <h2 class="text-center text-primary mb-4">PHP ve Veritabanı İşlemleri</h2>
+                <p  style="font-size: large; color: black; text-align: center;"  text-center mb-5>
+                    PHP ile MySQL veritabanı bağlantısı kurarak Veritabanı oluşturma, Veritabanına veri ekleme, sorgulama ve silme işlemleri yapabilirsiniz. Aşağıdaki adımlarda bu işlemleri nasıl gerçekleştirebileceğinizi öğrenebilirsiniz.
+                </p>
+        
+                <!-- Adım 1 -->
+                <div class="step-box">
+                    
+                    <h5 class="text-primary">Adım 1: Veritabanına Gitme</h5>
+                    <p>
+                         İlk Önce veritabanı oluşturlmalıdır.XAMP üzerinden "Admin" butonuna tıklayarak phpMyadmin sayfasına gidilir.
+                        
+        
+                    </p>
+                    <img src="img\sql.png" alt="Veritabanı Bağlantısı" class="img-fluid mb-3">
+                </div>
+        
+                <!-- Adım 2 -->
+                <div class="step-box">
+                 
+                    <h5 class="text-primary"></h5>
+                    <h5 class="text-primary">Adım 2: Veritabanı Oluşturma</h5>
+                    <p>
+
+                        Sağ taraftaki "Yeni" sekmesine giderek veritabnına ad verilir ve "Oluştur" butonuna tıklayarak veritabanı oluşturlur
+        
+                    </p>
+                    <img src="img\veritabanı.png" alt="Veri Ekleme" class="img-fluid mb-3">
+                </div>
+        
+                <!-- Adım 3 -->
+                <div class="step-box">
+                    <h5 class="text-primary">Adım 3: Veritabanına Bağlanma</h5>
+                    <p>
+                        PHP ile MySQL veritabanına bağlanmak için `mysqli_connect()` fonksiyonunu kullanabilirsiniz. Aşağıda bağlantıyı sağlamak için kullanılan örnek bir kod bulunmaktadır:
+                        <pre>&lt;?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "mydatabase";
+        
+        // Bağlantıyı oluştur
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
+        
+        // Bağlantı kontrolü
+        if (!$conn) {
+            die("Bağlantı başarısız: " . mysqli_connect_error());
+        }
+        ?&gt;</pre>
+                    </p>
+                    
+                </div>
+        
+                <!-- Adım 4 -->
+                <div class="step-box">
+                    
+                    <h5 class="text-primary">Adım 4: Veritabanına Veri Ekleme</h5>
+                    <p>
+                        
+                            Veritabanına veri eklemek için `INSERT INTO` SQL komutunu kullanabilirsiniz. Aşağıdaki örnekte, kullanıcı adı ve e-posta bilgilerini veritabanına ekliyoruz:
+                            <pre>&lt;?php
+            $sql = "INSERT INTO users (name, email) VALUES ('Ahmet', 'ahmet@example.com')";
+            
+            if (mysqli_query($conn, $sql)) {
+                echo "Yeni kayıt başarılı!";
+            } else {
+                echo "Hata: " . $sql . "&lt;br&gt;" . mysqli_error($conn);
+            }
+            ?&gt;</pre>
+                        
+                    </p>
+                    <img  src="img\forms.png" alt="Veri Güncelleme" class="img-fluid mb-3" style="height: 200px;">
+                </div>
+        
+                <!-- Adım 5 -->
+                <div class="step-box">
+                   
+                    <h5 class="text-primary">Adım 5: Veritabanındaki Verileri Sorgulama</h5>
+                    <p>
+                        <p>
+                            Veritabanındaki verileri sorgulamak için `SELECT` komutunu kullanabilirsiniz. Aşağıda, veritabanındaki tüm kullanıcıları listeleyen bir sorgu örneği yer almaktadır:
+                            <pre>&lt;?php
+            $sql = "SELECT id, name, email FROM users";
+            $result = mysqli_query($conn, $sql);
+            
+            if (mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    echo "id: " . $row["id"]. " - Ad: " . $row["name"]. " - E-posta: " . $row["email"]. "&lt;br&gt;";
+                }
+            } else {
+                echo "0 sonuç";
+            }
+            ?&gt;</pre>
+                        </p>
+                </div>
+                <div class="step-box">
+            
+                    <h5 class="text-primary">Adım 6: Veritabanındaki Veriyi Silme</h5>
+                    <p>
+                        Veritabanındaki bir veriyi silmek için `DELETE` SQL komutunu kullanabilirsiniz. Aşağıdaki örnekte, bir kullanıcının verisini silen bir PHP kodu yer almaktadır:
+                        <pre>&lt;?php
+            $sql = "DELETE FROM users WHERE id=1";
+            
+            if (mysqli_query($conn, $sql)) {
+            echo "Kayıt silindi!";
+            } else {
+            echo "Hata: " . $sql . "&lt;br&gt;" . mysqli_error($conn);
+            }
+            ?&gt;</pre>
+                    </p>
+                </div>
+            </div>
+            </section>
+            </div>
+            
+        
+        <style>
+            .php-database-section {
+                background-color: #f9f9f9;
+                padding: 40px 0;
+            }
+            .step-box p{
+
+                font-size: large;
+                
+                color: black;
+
+            }
+            .step-box {
+                background: #fff;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+        
+            .step-box img {
+                border-radius: 8px;
+                max-width: 100%;
+                height: 500px;
+                margin-bottom: 15px;
+            }
+        
+            .step-box pre {
+                background: #f1f1f1;
+                padding: 10px;
+                border-radius: 5px;
+                overflow-x: auto;
+            }
+        
+            .step-box h5 {
+                margin-top: 10px;
+            }
+        </style>
+        
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                        <p class="contact-info"><i class="fa fa-map-marker-alt me-3"></i>Hitit Üniversitesi Çorum</p>
+                        <p class="contact-info"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="contact-info"><i class="fa fa-envelope me-3"></i>ahmediyemamadli@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
+                        <a class="btn btn-link" href="#">About Us</a>
+                        <a class="btn btn-link" href="#">Contact Us</a>
+                        <a class="btn btn-link" href="#">Privacy Policy</a>
+                        <a class="btn btn-link" href="#">Terms</a>
+                        <a class="btn btn-link" href="#">Career</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Gallery<span></span></p>
+                        <div class="row g-2">
+                            <div class="col-4">
+                                <img class="gallery-img img-fluid" src="img/ders.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="gallery-img img-fluid" src="img/formkod.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="gallery-img img-fluid" src="img/pexels-shvetsa-12662875.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="gallery-img img-fluid" src="img/altumcode-PNbDkQ2DDgM-unsplash.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="gallery-img img-fluid" src="img/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="gallery-img img-fluid" src="img/html-css-collage-concept-with-person.jpg" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
+                        <p>Her Zaman İletişimde Kal</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>

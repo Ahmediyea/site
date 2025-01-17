@@ -91,28 +91,3 @@
     });
     
 })(jQuery);
-
-document.getElementById('registerForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Formun sayfa yenilemesini engelle
-    
-    // Form başarıyla gönderildi mesajı göster
-    document.getElementById('successMessage').style.display = 'block';
-    
-    // Form alanlarını temizle
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('password').value = '';
-});
- 
-document.getElementById('contact').addEventListener('submit', function (event) {
-    event.preventDefault(); // Formun sayfa yenilemesini engelle
-    
-    // Form başarıyla gönderildi mesajı göster
-    document.getElementById('successMessag').style.display = 'block';
-    
-    // Form alanlarını temizle
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('subject').value = '';
-    document.getElementById('message').value = '';
-});
