@@ -639,3 +639,14 @@ h6,
     word-wrap: break-word; /* Mail adresinin taşmasını engellemek için */
     overflow-wrap: break-word; /* Mail adresinin taşmasını engellemek için */
 }
+#registerForm .mb-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: bolder;
+}
+
+.form-label, .form-control {
+    width: 100%;
+}
+
